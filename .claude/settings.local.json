@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m streamlit run app.py --server.headless true)",
+      "Bash(python -c \"import app\")",
+      "Bash(netstat -ano)",
+      "Bash(findstr \":850\")",
+      "Bash(python -c ' *)",
+      "Bash(python _patch.py)",
+      "Bash(rm _patch.py)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('app.py', encoding='utf-8'\\).read\\(\\)\\); print\\('OK syntax valid'\\)\")",
+      "Bash(python _patch2.py)",
+      "Bash(rm _patch2.py)",
+      "Bash(curl -s \"http://localhost:8504/_stcore/health\")",
+      "Bash(curl -s \"http://localhost:8504/\" -o /tmp/page.html)",
+      "Bash(netstat -ano -p TCP)",
+      "Bash(curl -s -o /dev/null -w \"8501=%{http_code}\\\\n\" --max-time 2 http://localhost:8501/)",
+      "Bash(curl -s -o /dev/null -w \"8504=%{http_code}\\\\n\" --max-time 2 http://localhost:8504/)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('app.py', encoding='utf-8'\\).read\\(\\)\\); print\\('Syntax OK'\\)\")",
+      "Bash(python -m streamlit run app.py --server.port 8510 --server.headless true --browser.gatherUsageStats false)"
+    ]
+  }
+}
